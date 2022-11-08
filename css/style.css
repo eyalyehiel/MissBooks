@@ -1,0 +1,257 @@
+:root {
+    --orange-peel: #ff9f1cff;
+    --mellow-apricot: #ffbf69ff;
+    --white: #ffffffff;
+    --light-cyan: #cbf3f0ff;
+    --tiffany-blue: #2ec4b6ff;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #7e7e7e;
+}
+
+@font-face {
+    font-family: Comfortaa;
+    src: url(fonts/Comfortaa-VariableFont_wght.ttf);
+}
+
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p {
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+}
+
+h1 {
+    font-family: Comfortaa, sans-serif;
+}
+
+button,
+input {
+    border-radius: 5px;
+    border: 1px solid #7e7e7e;
+}
+
+a {
+    text-decoration: none;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-header,
+.main-footer {
+    background-color: var(--light-cyan);
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-header {
+    flex-direction: column;
+}
+
+.main-header nav {
+    display: flex;
+    gap: 100px;
+}
+
+.main-header nav a {
+    text-decoration: none;
+    transition: 1s;
+}
+
+.main-header nav a:hover {
+    transform: scale(1.1);
+}
+
+.book-app,
+.home-page,
+.about {
+    height: 80vh;
+}
+
+.about {
+    display: grid;
+    place-items: center;
+}
+
+.about main {
+    text-align: center;
+}
+
+.book-app .book-section {
+    overflow: auto;
+}
+
+.user-msg{
+    position: fixed;
+    padding: 10px;
+    top: 40px;
+    right: 40px;
+    background-color: var(--light-cyan);
+    border: 1px solid var(--mellow-apricot);
+    border-radius: 5px;
+    box-shadow: 0 0 4px 1px var(--tiffany-blue);
+}
+
+/* book filter */
+.book-app .book-filters {
+    background-color: var(--light-cyan);
+    box-shadow: 0px 1px 4px #7e7e7e;
+}
+
+.book-app .book-filters form {
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    gap: 10px;
+}
+
+/* book section */
+.book-section ul {
+    height: 75vh;
+    display: grid;
+    list-style-type: none;
+    grid-template-columns: repeat(auto-fit, 250px);
+    grid-template-rows: repeat(auto-fit, 120px);
+    justify-content: center;
+    gap: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+}
+
+.book-section ul li {
+    border: 1px solid var(--mellow-apricot);
+    border-radius: 5px;
+    box-shadow: 0 0 4px 1px var(--tiffany-blue);
+    height: 120px;
+    background-color: white;
+    transition: transform .3s;
+}
+
+.book-section ul li:hover {
+    transform: scale(1.05);
+}
+
+.book-section ul .book-preview {
+    padding: 10px;
+    height: 100%;
+    display: flex;
+}
+
+.book-preview img {
+    height: 100px;
+    margin-right: 10px;
+}
+
+.book-preview .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* book details */
+/* .book-app .book-details {
+    background-color: white;
+    border: 1px solid var(--light-cyan);
+    border-radius: 5px;
+    box-shadow: 0 0 4px 1px #7e7e7e;
+    position: fixed;
+    width: 50vw;
+    height: max-content;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    line-height: 2rem;
+} */
+
+.book-details {
+    height: 80vh;
+    padding: 10px;
+    overflow: auto;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 60% 1fr;
+    gap: 5px;
+}
+.book-details >* {
+    border: 1px solid var(--light-cyan);
+    box-shadow: 0 0 4px 1px #7e7e7e;
+    border-radius: 5px;
+}
+
+.book-details img {
+    height: 100%;
+}
+
+.book-details .book-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.book-details form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.book-details .book-reviews {
+    display: grid;
+    overflow: auto;
+    justify-self: stretch;
+    grid-column: span 3;
+    padding: 10px;
+}
+
+.book-reviews ul {
+    list-style-type: none;
+}
+
+.book-reviews ul li {
+    padding: 7px;
+    background-color: var(--light-cyan);
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+    margin-bottom: 3px;
+}
+.book-reviews ul .comment {
+    display: flex;
+    justify-content: space-around;
+}
+.book-reviews .comment button {
+    justify-self: end;
+}
+
+
+
+/* helpers */
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}
